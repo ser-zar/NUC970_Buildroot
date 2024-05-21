@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+# Load modules
+
+insmod /root/build/engine_driver.ko
+insmod /root/build/hx711_driver.ko
+insmod /root/build/optic_driver.ko
+insmod /root/build/water_driver.ko

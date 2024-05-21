@@ -1,0 +1,22 @@
+#!/bin/sh
+#
+# Set bufsiz value
+
+case "$1" in
+  start)
+	chmod 666 /sys/module/spidev/parameters/bufsiz
+	echo 153600 > /sys/module/spidev/parameters/bufsiz
+	echo "Set bufsiz value"
+	;;
+  stop)
+	;;
+  restart|reload)
+	"$0" stop
+	"$0" start
+	;;
+  *)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit $?

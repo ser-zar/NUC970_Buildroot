@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+# Unload modules
+
+rmmod water_driver.ko
+rmmod optic_driver.ko
+rmmod hx711_driver.ko
+rmmod engine_driver.ko
